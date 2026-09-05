@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>epwv</title>
+  <link rel="icon" type="image/x-icon" href="nix.ico">
+  <link rel="stylesheet" href="css.css">
+</head>
+<body style="--font-size: 16px;">
+
+  <div class="content">
+    <h1>epwv</h1>
+    <p>
+      This site is used to store my projects and update people along the way;<br>
+      previously, I used this site to store fun side projects that never worked out,<br>
+      this site will be used to show them off
+    </p>
+    <p class="leave">If you would like to leave, please click <a href="https://duckduckgo.com">here</a>.</p>
+  </div>
+
+  <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"></circle>
+      <line x1="12" y1="2" x2="12" y2="4"></line>
+      <line x1="12" y1="20" x2="12" y2="22"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="2" y1="12" x2="4" y2="12"></line>
+      <line x1="20" y1="12" x2="22" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"></path>
+    </svg>
+  </button>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var toggle = document.getElementById('theme-toggle');
+      var stored = localStorage.getItem('theme');
+
+      if (stored === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+      }
+
+      toggle.addEventListener('click', function () {
+        var isDark = root.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          root.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        } else {
+          root.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
