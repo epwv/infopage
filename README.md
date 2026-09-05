@@ -3,5 +3,7 @@
 This is my main site.
 
 Live at: [huhfloppuh.com](https://huhfloppuh.com)
+Pages: https://epwv.github.io/infopage/
 
-This is used to store my projects and update people along the way; previously, I used this site to store fun side projects that never worked out, now it's used to show them off.
+just the source code lol
+its not good
