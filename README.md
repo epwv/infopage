@@ -3,7 +3,7 @@
 This is my main site.
 
 Live at: [huhfloppuh.com](https://huhfloppuh.com)
-Pages: https://epwv.github.io/infopage/
+Pages: [https://epwv.github.io](https://epwv.github.io/infopage/)
 
 just the source code lol
 its not good
